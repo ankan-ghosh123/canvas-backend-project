@@ -1,0 +1,1068 @@
+{
+  "info": {
+    "_postman_id": "f1bbc5b2-0f77-4083-90a7-6727218949a3",
+    "name": "kobiterCanvas",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55436899"
+  },
+  "item": [
+    {
+      "name": "user requestes",
+      "item": [
+        {
+          "name": "upload typed poem",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": \"04a030c0-cf7b-4ec6-8dec-06fe2ac8e798\",\r\n  \"caption\": \"keep pushing hard man \",\r\n  \"post_type\": \"TYPED\",\r\n  \"poem_text\":\"ha ha ha ha do it\",\r\n  \"poem_name\":\"krishno koli\",\r\n  \"media_url\": \"https://ik.imagekit.io/q7ryra9is/uploads/backgroud_posts/download__2__4wZ_KPHg0.jpg\",\r\n  \"text_style_config\": {\r\n    \"color\": \"#FFFFFF\",\r\n    \"fontFamily\": \"Merriweather\",\r\n    \"fontSize\": 18,\r\n    \"textAlign\": \"center\",\r\n    \"position\": {\r\n      \"x\": 50.0,\r\n      \"y\": 45.5\r\n    }\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/typed-poem",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "typed-poem"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload image poem",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "user_id",
+                  "value": "04a030c0-cf7b-4ec6-8dec-06fe2ac8e798",
+                  "type": "text",
+                  "uuid": "0b22633d-7a45-4bca-8641-63effae34db5"
+                },
+                {
+                  "key": "caption",
+                  "value": "all is well",
+                  "type": "text",
+                  "uuid": "5c404575-1b94-4d36-85ef-57d672b89dc2"
+                },
+                {
+                  "key": "post_type",
+                  "value": "IMAGE_UPLOAD",
+                  "type": "text",
+                  "uuid": "c49bf556-555f-43a5-8194-159e83382420"
+                },
+                {
+                  "key": "poem-image",
+                  "type": "file",
+                  "uuid": "5684c29a-62a6-472a-9459-866159b51cfe",
+                  "src": "/C:/Users/Ankan Ghosh/Downloads/Spiderman, Logo, Marvel, Superhero 8K.jpg"
+                },
+                {
+                  "key": "poem_name",
+                  "value": "alaml kanti",
+                  "type": "text",
+                  "uuid": "c5a42ed1-03d1-43f9-a27b-f0f7052314dc"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/image-poem",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "image-poem"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update poem caption",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"newCaption\":\"new caption added\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/put/73ad707f-9cc7-49e0-8ca8-8078e02baf2c/update-caption",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "put",
+                "73ad707f-9cc7-49e0-8ca8-8078e02baf2c",
+                "update-caption"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update poem name",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"newPoemName\":\"new poem name\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/put/73ad707f-9cc7-49e0-8ca8-8078e02baf2c/update-poemname",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "put",
+                "73ad707f-9cc7-49e0-8ca8-8078e02baf2c",
+                "update-poemname"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete poem",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/delete/cf78805d-015f-4263-acae-19d9367c21c1/delete-poem",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "delete",
+                "cf78805d-015f-4263-acae-19d9367c21c1",
+                "delete-poem"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "admin requestes",
+      "item": [
+        {
+          "name": "background-uploads",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "background-img",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/Ankan Ghosh/Downloads/67+ Stunning Trèfle à quatre feuilles Wallpapers – Free Download Now!.jpg"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:3000/api/admin/post/background-uploads",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "admin",
+                "post",
+                "background-uploads"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "yt-url  of newest video",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"video_url\":\"https://youtu.be/32tuYSSSsrc?si=WsdTsH0J_xOm6963\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/admin/post/yt-url-upload",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "admin",
+                "post",
+                "yt-url-upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload posters",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "caption",
+                  "value": "comming soon 2",
+                  "type": "text"
+                },
+                {
+                  "key": "poster",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/Ankan Ghosh/Downloads/download (13).jpg"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:3000/api/admin/post/yt-poster-upload",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "admin",
+                "post",
+                "yt-poster-upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete yt poster",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/admin/ba93693d-ab66-47ff-ad5a-02bec3a0615c/delete-poster",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "admin",
+                "ba93693d-ab66-47ff-ad5a-02bec3a0615c",
+                "delete-poster"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "disable background",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/admin/post/bbb35e39-44d7-401b-9951-9857e4fc0af3/disable-background",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "admin",
+                "post",
+                "bbb35e39-44d7-401b-9951-9857e4fc0af3",
+                "disable-background"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth requests",
+      "item": [
+        {
+          "name": "user register req",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/registeruser",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "registeruser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"email\":\"007Userrrr@Testemail.com\",\r\n    \"password\":\"007User@Password\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/post/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "post",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"username\":\"kobitar_canvas\",\r\n      \"password\":\"3Kobitarcanvas@password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/post/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "post",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update password",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"currentPassword\":\"07User@Password\",\r\n\"newPassword\":\"007User@Password\",\r\n\"confirmNewPassword\":\"007User@Password\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/put/update-password",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "put",
+                "update-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update email",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"currentPassword\":\"007User@Password\",\r\n    \"newEmail\":\"007Userrrr@Testemail.com\",\r\n    \"confiredNewEmail\":\"007Userrrr@Testemail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/put/update-email",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "put",
+                "update-email"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh AccessToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/auth/refresh-accesstoken",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "refresh-accesstoken"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/auth/get/me",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "get",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/logout",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "public request",
+      "item": [
+        {
+          "name": "fetch backgrounds",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/public/get/fetch-backgrounds",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "public",
+                "get",
+                "fetch-backgrounds"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch yt poster",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/public/get/fetch-ytposter",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "public",
+                "get",
+                "fetch-ytposter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch yt videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/public/get/fetch-ytvideos",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "public",
+                "get",
+                "fetch-ytvideos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "global feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/public/get/feed?limit=2&cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0zMVQxNDo0Nzo1MS43OTdaIiwicG9zdF9pZCI6ImE2NzFlMDIxLTA4OTctNDI0OS1hNzA3LTk4YjA2NmRiMDZiOSJ9",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "public",
+                "get",
+                "feed"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2"
+                },
+                {
+                  "key": "cursor",
+                  "value": "eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0zMVQxNDo0Nzo1MS43OTdaIiwicG9zdF9pZCI6ImE2NzFlMDIxLTA4OTctNDI0OS1hNzA3LTk4YjA2NmRiMDZiOSJ9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch a users profile with all posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/public/get/04a030c0-cf7b-4ec6-8dec-06fe2ac8e798/posts?limit=1&cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yMVQxOTowNjowNy40MzRaIiwicG9zdF9pZCI6IjgwYmExM2VhLWIzODAtNDk0MC1hYjgxLWI0MGQ1NDgxOWI4MCJ9",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "public",
+                "get",
+                "04a030c0-cf7b-4ec6-8dec-06fe2ac8e798",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "1"
+                },
+                {
+                  "key": "cursor",
+                  "value": "eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yMVQxOTowNjowNy40MzRaIiwicG9zdF9pZCI6IjgwYmExM2VhLWIzODAtNDk0MC1hYjgxLWI0MGQ1NDgxOWI4MCJ9"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "item": [
+        {
+          "name": "make a comment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comment\":\"beautifull\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/comment/post/530f19b4-91f7-45a8-8799-acfb6ce35c82/make-comment",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comment",
+                "post",
+                "530f19b4-91f7-45a8-8799-acfb6ce35c82",
+                "make-comment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch comments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/comment/get/530f19b4-91f7-45a8-8799-acfb6ce35c82/fetch-comments?limit=2&cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0xMC0wNVQyMTowMDoxNi4xMThaIiwiY29tbWVudF9pZCI6ImRhN2I2N2QzLWM2YzUtNDVlZS1iZTVlLTk3MGY4Yjk3ZjdjMSJ9",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comment",
+                "get",
+                "530f19b4-91f7-45a8-8799-acfb6ce35c82",
+                "fetch-comments"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2"
+                },
+                {
+                  "key": "cursor",
+                  "value": "eyJjcmVhdGVkX2F0IjoiMjAyNi0xMC0wNVQyMTowMDoxNi4xMThaIiwiY29tbWVudF9pZCI6ImRhN2I2N2QzLWM2YzUtNDVlZS1iZTVlLTk3MGY4Yjk3ZjdjMSJ9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit comment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"editedComment\":\"goog poem--> edited comment-->super poem\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/comment/post/18324533-e3ff-4bfb-a83b-024ee358ecdd/edit-comment",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comment",
+                "post",
+                "18324533-e3ff-4bfb-a83b-024ee358ecdd",
+                "edit-comment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete comment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/comment/post/4a3337de-ed3a-4134-b09e-d0f667b27fe5/delete-comment",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "comment",
+                "post",
+                "4a3337de-ed3a-4134-b09e-d0f667b27fe5",
+                "delete-comment"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "poem selection  feature(admin only)",
+      "item": [
+        {
+          "name": "mark a poem",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/feature/cf78805d-015f-4263-acae-19d9367c21c1/markPost",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "cf78805d-015f-4263-acae-19d9367c21c1",
+                "markPost"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch mark posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/get/fetch-marked-posts",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "get",
+                "fetch-marked-posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set a candidate poem",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"email\":\"07user@email.com\",\r\n    \"password\":\"07User@password\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/post/1e21a2cd-235f-480c-93c7-3a416ca0b308/set-candidate",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "post",
+                "1e21a2cd-235f-480c-93c7-3a416ca0b308",
+                "set-candidate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set poem of week",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/post/set-poemofweek",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "post",
+                "set-poemofweek"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete candidate",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/feature/post/remove-candidate",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "post",
+                "remove-candidate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete poem of week",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/remove-poemofweek",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "remove-poemofweek"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "unmark poem",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/post/1e21a2cd-235f-480c-93c7-3a416ca0b308/unmark-posts",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "post",
+                "1e21a2cd-235f-480c-93c7-3a416ca0b308",
+                "unmark-posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fetch-poem of week",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{    \"fullname\":\"Kobitar Canvas\",\r\n     \"username\":\"kobitar_canvas\",\r\n    \"email\":\"kobitarcanvas3@email.com\",\r\n    \"password\":\"3Kobitarcanvas@password\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/feature/get/fetch-poemofweek",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "feature",
+                "get",
+                "fetch-poemofweek"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
